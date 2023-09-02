@@ -1,4 +1,4 @@
-# Multi-layer Percentron Multiclass Classifier in Scikit-Learn with Shapley Explanations
+# Multi-layer Perceptron Multiclass Classifier in Scikit-Learn with Shapley Explanations
 ## Project Description
 This repository is a dockerized implementation of the re-usable multiclass classifier model. It is implemented in flexible way so that it can be used with any multiclass classification dataset with the use of CSV-formatted data, and a JSON-formatted data schema file. The main purpose of this repository is to provide a complete example of a machine learning model implementation that is ready for deployment.
 The following are the requirements for using your data with this model:
@@ -11,7 +11,7 @@ The following are the requirements for using your data with this model:
 ---
 Here are the highlights of this implementation: <br/>
 - A flexible preprocessing pipeline built using **SciKit-Learn** and **feature-engine**. Transformations include missing value imputation, categorical encoding, outlier removal, feature selection, and feature scaling. <br/>
-- A **Multi-layer Percentron Multiclass Classifier** algorithm built using **SciKit-Learn**
+- A **Multi-layer Perceptron Multiclass Classifier** algorithm built using **SciKit-Learn**
 - Hyperparameter-tuning using **scikit-optimize**
 - SHAP explainer using the **shap** package
 - **FASTAPI** inference service for online inferences.
@@ -37,7 +37,7 @@ The following is the directory structure of the project:
   - **`data_models/`**: for data models for input validation including the schema, training and test files, and the inference request data. It also contains the data model for the batch prediction results.
   - **`schema/`**: for schema handler script. This script contains the class that provides helper getters/methods for the data schema.
   - **`preprocessing/`**: for data preprocessing scripts including the feature and target encoding/transformations. We use **Scikit-Learn** and **feature-engine** for preprocessing.
-  - **`prediction/`**: Scripts for the Multi-layer Percentron Multiclass Classifier model implemented using **Scikit-Learn** library.
+  - **`prediction/`**: Scripts for the Multi-layer Perceptron Multiclass Classifier model implemented using **Scikit-Learn** library.
   - **`hyperparameter_tuning/`**: for hyperparameter-tuning (HPT) functionality implemented using **Scikit-Optimize** for the model.
   - **`xai/`**: for explainable AI functionality implemented using **Shap** library. This provides local explanations for predictions.
   - **`serve.py`**: This script is used to serve the model as a REST API using **FastAPI**. It loads the artifacts and creates a FastAPI server to serve the model. It provides 3 endpoints: `/ping`, `/infer`, and `/explain`. The `/ping` endpoint is used to check if the server is running. The `/infer` endpoint is used to make predictions. The `/explain` endpoint is used to get local explanations for the predictions.
